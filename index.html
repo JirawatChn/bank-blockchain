@@ -7,21 +7,21 @@
   </head>
   <body class="bg-gray-100 text-center p-10">
     <div class="mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <p class="text-base pb-2">Bank System DApp</p>
-      <div class="text-[10px]">
+        <p class="text-xl font-semibold pb-4">Bank System DApp</p>
+      <div class="text-base">
         <p class="pb-2">65065930 จิรวัฒน์ ชนะสิทธิ์</p>
         <div class="mb-2">
           <button
-            class="bg-green-500 hover:bg-green-700 text-white p-1 rounded ml-1 text-[9px] mb-2"
+            class="bg-green-500 hover:bg-green-700 text-white px-3 py-2 rounded text-sm mb-2"
             onclick="connectAccount()"
           >
             Connect to MetaMask
           </button>
-          <div class="flex items-center justify-center">
+          <div class="flex items-center justify-center gap-2">
             <p>Account</p>
             <input
               type="text"
-              class="border border-gray-300 rounded p-1 w-1/2 ml-1"
+              class="border border-gray-300 rounded px-2 py-1 w-1/2"
               readonly
               disabled
               id="account"
@@ -29,12 +29,12 @@
           </div>
         </div>
         <div class="flex-col flex justify-left items-center border p-4 rounded hidden" id="details">
-          <div class="flex items-center mb-2">
+          <div class="flex items-center mb-4 gap-2">
             <p class="px-1">Balance</p>
             <input
               type="number"
               placeholder="0"
-              class="border border-gray-300 rounded px-1"
+              class="border border-gray-300 rounded px-2 py-1"
               readonly
               disabled
               id="balance"
@@ -42,40 +42,40 @@
             <p class="px-1">Wei</p>
           </div>
 
-          <div class="flex items-center mb-2">
-            <p class="px-1 inline-block">Deposit</p>
+          <div class="flex items-center mb-4 gap-2">
+            <p class="px-1">Deposit</p>
             <input
               type="number"
               placeholder="0"
-              class="border border-gray-300 rounded px-1"
+              class="border border-gray-300 rounded px-2 py-1"
               required
               id="deposit"
             />
             <button
-              class="bg-red-500 hover:bg-red-700 text-white p-1 rounded ml-1 text-[9px]"
+              class="bg-red-500 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
               onclick="deposit()"
             >
               Deposit
             </button>
           </div>
 
-          <div class="flex items-center mb-2">
-            <p class="px-1 inline-block">Withdraw</p>
+          <div class="flex items-center mb-4 gap-2">
+            <p class="px-1">Withdraw</p>
             <input
               type="number"
               placeholder="0"
-              class="border border-gray-300 rounded px-1"
+              class="border border-gray-300 rounded px-2 py-1"
               required
               id="withdraw"
             />
             <button
-              class="bg-blue-500 hover:bg-blue-700 text-white p-1 rounded ml-1 text-[9px]"
+              class="bg-blue-500 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm"
               onclick="withdraw()"
             >
               Withdraw
             </button>
           </div>
-            <p id="alert"></p>
+          <p id="alert" class="text-sm text-red-600"></p>
         </div>
       </div>
     </div>
