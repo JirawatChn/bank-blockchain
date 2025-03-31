@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bank-Blockchain</title>
+  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <body class="bg-gray-100 text-center p-10">
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <p class="text-base pb-2">Bank System DApp</p>
+      <div class="text-[10px]">
+        <p class="pb-2">65065930 จิรวัฒน์ ชนะสิทธิ์</p>
+        <div class="mb-2">
+          <button
+            class="bg-green-500 hover:bg-green-700 text-white p-1 rounded ml-1 text-[9px] mb-2"
+            onclick="connectAccount()"
+          >
+            Connect to MetaMask
+          </button>
+          <div class="flex items-center justify-center">
+            <p>Account</p>
+            <input
+              type="text"
+              class="border border-gray-300 rounded p-1 w-1/2 ml-1"
+              readonly
+              disabled
+              id="account"
+            />
+          </div>
+        </div>
+        <div class="flex-col flex justify-left items-center border p-4 rounded hidden" id="details">
+          <div class="flex items-center mb-2">
+            <p class="px-1">Balance</p>
+            <input
+              type="number"
+              placeholder="0"
+              class="border border-gray-300 rounded px-1"
+              readonly
+              disabled
+              id="balance"
+            />
+            <p class="px-1">Wei</p>
+          </div>
+
+          <div class="flex items-center mb-2">
+            <p class="px-1 inline-block">Deposit</p>
+            <input
+              type="number"
+              placeholder="0"
+              class="border border-gray-300 rounded px-1"
+              required
+              id="deposit"
+            />
+            <button
+              class="bg-red-500 hover:bg-red-700 text-white p-1 rounded ml-1 text-[9px]"
+              onclick="deposit()"
+            >
+              Deposit
+            </button>
+          </div>
+
+          <div class="flex items-center mb-2">
+            <p class="px-1 inline-block">Withdraw</p>
+            <input
+              type="number"
+              placeholder="0"
+              class="border border-gray-300 rounded px-1"
+              required
+              id="withdraw"
+            />
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white p-1 rounded ml-1 text-[9px]"
+              onclick="withdraw()"
+            >
+              Withdraw
+            </button>
+          </div>
+            <p id="alert"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  </body>
+</html>
